@@ -10,8 +10,6 @@ function writePassword() {
 
 }
 
-
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
@@ -30,10 +28,8 @@ function generatePassword(){
         }
       };
       validateLengthChoice();
- 
         }
     chooseLength();
-
 // User chooses characters to include in PW
     function chooseChars () {
     var upperConfirm = confirm("Include uppercase letters? (A, B, C, D, etc.)");
@@ -100,7 +96,7 @@ function generateNum(length) {
 }
 console.log(generateNum(120));
 
-const sym ='!@#$%^&*()<>?:;{}[]|\~`';
+const sym ='!@#$%^&*()<>?:;{}[]|~`';
 
 function generateSym(length) {
     let resultSym = ' ';
