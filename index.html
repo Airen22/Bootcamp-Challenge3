@@ -1,86 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="assets/css/reset.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
-
-<body>
-  <header>
-    <h1>Portfolio</h1>
-    <nav>
-      <ul>
-        <li><a href="#aboutme">About Me</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#contact">Contact Me</a></li>
-        <li><a href="#">Resume</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <banner class="banner">
-    <h2 class="bannertext">Check it out!</h2>
-    <img src="assets/images/universe.jfif" alt="universe" class="bannerimage">
-  </banner>
-
-  <main>
-    <section class="container" id="aboutme">
-      <h2 class="subtitle">About<br>Me</h2>
-        <div class="article">
-          <p>Nisi nisi aute aute et esse enim quis esse amet. Quis minim elit officia eiusmod veniam do aute sit laboris. Ut sunt adipisicing id fugiat minim pariatur consectetur. Consectetur esse non Lorem fugiat et adipisicing est proident magna proident nostrud laboris. In dolor eu aute in minim quis consectetur occaecat dolore ad ullamco labore sit <br>
-          <br>
-          Velit tempor amet deserunt consectetur veniam aute elit. Enim elit sit eu aute dolor eiusmod sit sunt ullamco. Aliqua anim qui sint minim dolor anim laboris. Enim adipisicing aute dolor laboris enim ad. Minim veniam anim veniam esse minim in consequat elit proident anim aliquip magna laborum voluptate. Fugiat incididunt veniam culpa aliquip qui quis occaecat amet cupidatat sit. Anim fugiat esse reprehenderit voluptate exercitation aliqua Lorem quis consectetur Lorem Lorem amet.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
         </div>
-    </section>
-
-    <section class="container" id="work">
-      <h2 class="subtitle">Work</h2>
-      <div class="article">
-        <div>
-          <p id="imagetxt">Arctic</p>
-            <img src="assets/images/arctic.jfif" alt="arctic  landscape" class="largeimage" id="largeimagetxt"/>
-
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
         </div>
-        <div class="imgcolumns">
-        <div>
-          <p id="imagetxt">Beach</p>
-            <img src="assets/images/beach.jfif" alt="beach landscape" class="smallimage" id="smallimagetext"/>
+        <div class="card-footer">
+          <button id="generate" class="btn">Generate Password</button>
         </div>
-
-        <div>
-          <p id="imagetxt">Desert</p>
-            <img src="assets/images/desert.jfif" alt="desert landscape" class="smallimage" id="smallimagetext"/>
-        </div>
-        
-        <div>
-          <p id="imagetxt">Forest</p>
-            <img src="assets/images/forest.jfif" alt="forest landscape" class="smallimage" id="smallimagetext"/>
-        </div>
-        
-        <div>
-          <p id="imagetxt">Space</p>
-            <img src="assets/images/space.jfif" alt="space landscape" class="smallimage" id="smallimagetext"/>
-       </div>
       </div>
     </div>
-    </section>
-
-    <section class="container" id="contact">
-      <h2 class="subtitle">Contact Me</h2>
-        <div class="article">
-          <ul>
-            <li><a href=google.com>Email</a></li>
-            <li><a href=Github.com>Github Profile</a></li>
-            <li><a href=linkedin.com>LinkedIn</a></li>
-          </ul>
-        </div>
-    </section>
-
-  </main>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
