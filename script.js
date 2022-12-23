@@ -47,25 +47,16 @@ function generatePassword(){
         return ;
         } else {
           alert("Invalid entry! Must select at least one character type.");
-        //   chooseChars();
         }
       };
-      validateCharacterChoice();   
-    // }
-    // chooseChars();
-    
-// Array for each character type
-// let upper = [];
-// let lower = [];
-// let num = [];
-// let sym = [];
-//    function randomComp (length) {
+      validateCharacterChoice();
+//Computer chooses random characters   
     var compChoice = [];
     function randomComp () {
         if(upperConfirm == true){
              var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",];
             var indexUpper = Math.floor(Math.random()*upper.length);
-            var upperChoice = upper[indexUpper];
+            var upperChoice = upper[indexUpper]
         }
         if (lowerConfirm == true) {
             var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -86,25 +77,13 @@ function generatePassword(){
             compChoice.push(lowerChoice)
             compChoice.push(numChoice)
             compChoice.push(symChoice)
-            console.log(compChoice)
+            compChoice.sort(() => Math.random() - 0.5);
         }
+// ----------How to make it repeat until the chosen length is reached-------------
     for (var i = 0; i <= lengthChoice*.25; i++)
-    randomComp(i);
+    randomComp();
+            console.log(compChoice.join(""))
 
- 
- 
+    }
 
-    // must return a string value that is the password.
-    // prompt user to choose num b/w 8 and 128
-        // var to save lenght
-        // validate user num
-    // confirm user upper, lower, num, special characters (4 confirm prompts)
-    // 4 var to save T/F to include characters
-    // vars that include all user options of each category. Array of string for each cat.
-    // var upper = ["A", "B"]
-    // If user says yes to include that cat choose random elements from the array
-        // How to decide how many elements to choose from each array
-    // Validate that at lease one cat was chosen
-    // Join chosen elements into a string
-    // return passwordString;
-}
+// ----------How to call writepassword function-----------------    
