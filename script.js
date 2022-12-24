@@ -61,22 +61,28 @@ function generatePassword(){
             }
         } 
         if (lowerConfirm == true) {
+            for (var i=0; i<= lengthChoice* 0.25; i++) {
             var poppedUpper = compChoice.pop ();
             compChoice.unshift(poppedUpper.toLowerCase());
+            }
         }
         if (numConfirm == true) {
+            for (var i=0; i <= lengthChoice*0.25; i++) {
             var num = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
             var indexNum = Math.floor(Math.random()*num.length);
             var numChoice = num[indexNum];
             poppedUpper = compChoice.pop();
             compChoice.unshift(numChoice); 
         }
+        }
         if (symConfirm == true) {
+            for (var i=0; i <= lengthChoice*0.25; i++){
             var sym = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", '+', "-", ".", "~", "|", "<", ">", "=", "-", "_", "/", ":", ";", "?", "[", "]", "{", "}"];
             var indexSym = Math.floor(Math.random()*sym.length);
             var symChoice = sym[indexSym];
             poppedUpper = compChoice.pop();
             compChoice.unshift(symChoice);
+            }
         }   
     
            return compChoice.sort(() => Math.random() -0.5);
